@@ -1,19 +1,29 @@
-version = '0.0.1'
-
 Gem::Specification.new do |s|
-  s.platform     = Gem::Platform::RUBY
-  s.name         = 'tlsmail'
-  s.version      = version
-  s.summary      = 'Monkey patch usually used for gmail compatability.'
-  s.description  = 'This library dynamically replace net/smtp and net/pop with these in ruby 1.9 and enables pop or smtp via SSL/TLS.'
-  s.required_ruby_version = '~> 1.9.2'
-  s.author       = 'Mr. Zoriorz'
-  s.email        ='zoriorz@gmail.com'
-  s.homepage     = 'http://tlsmail.rubyforge.org'
-  s.rubyforge_project = 'tlsmail'
-  s.files        = Dir['Rakefile', 'README.txt', 'CHANGELOG.txt', 'Manifest.txt', 'lib/**/*', 'test/*']
-  s.require_path = 'lib'
-  s.requirements << 'none'
+  s.name = %q{tlsmail}
+  s.version = "0.0.1"
 
-  s.has_rdoc     = true
+  s.required_rubygems_version = nil if s.respond_to? :required_rubygems_version=
+  s.authors = ["zorio"]
+  s.cert_chain = nil
+  s.date = %q{2007-03-17}
+  s.description = %q{This library enables pop or smtp via ssl/tls by dynamically replacing these classes to these in ruby 1.9.}
+  s.email = %q{zoriorz@gmail.com}
+  s.files = ["Rakefile", "README.txt", "CHANGELOG.txt", "Manifest.txt", "lib/tlsmail.rb", "lib/net/pop.rb", "lib/net/smtp.rb", "test/test_helper.rb", "test/tlsmail_test.rb", "test/template.parameters.rb"]
+  s.homepage = %q{http://tlsmail.rubyforge.org}
+  s.require_paths = ["lib"]
+  s.required_ruby_version = Gem::Requirement.new("> 0.0.0")
+  s.rubyforge_project = %q{tlsmail}
+  s.rubygems_version = %q{1.3.7}
+  s.summary = %q{This library enables pop or smtp via ssl/tls by dynamically replacing these classes to these in ruby 1.9.}
+  s.test_files = ["test/tlsmail_test.rb"]
+
+  if s.respond_to? :specification_version then
+    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
+    s.specification_version = 1
+
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+    else
+    end
+  else
+  end
 end
