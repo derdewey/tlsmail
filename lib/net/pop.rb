@@ -683,11 +683,6 @@ module Net
 
   end   # class POP3
 
-  # class aliases
-  POP = POP3
-  POPSession  = POP3
-  POP3Session = POP3
-
   #
   # This class is equivalent to POP3, except that it uses APOP authentication.
   #
@@ -699,7 +694,13 @@ module Net
   end
 
   # class aliases
+  saved_verbosity = $-v
+  $-v = nil
+  POP = POP3
+  POPSession  = POP3
+  POP3Session = POP3
   APOPSession = APOP
+  $-v = saved_verbosity
 
   #
   # This class represents a message which exists on the POP server.

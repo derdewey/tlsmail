@@ -8,7 +8,7 @@ This library is public domain software and provided without warranty of any kind
 
 == Author
 
-zoriorz@gmail.com
+zoriorz@gmail.com, xrlange@gmail.com
 
 == Description
 

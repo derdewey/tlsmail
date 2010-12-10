@@ -802,7 +802,9 @@ module Net
     end
 
   end   # class SMTP
-
+  saved_verbosity = $-v
+  $-v = nil
   SMTPSession = SMTP
+  $-v = saved_verbosity
 
 end   # module Net
